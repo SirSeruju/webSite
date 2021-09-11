@@ -1,0 +1,31 @@
+:root {
+  --name-font-size: 32px;
+  --font-size: 24px;
+  --height: 60px;
+  --tab: 10%;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-size: 0;
+  font-family: monospace;
+}
+
+div {
+  height: var(--height);
+  line-height: var(--height);
+  display: inline-block;
+}
+
+#name {
+  font-size: var(--name-font-size);
+  float: left;
+}
+
+#works {
+  font-size: var(--font-size);
+  margin-left: var(--tab);
+  margin-right: var(--tab);
+  float: right;
+}

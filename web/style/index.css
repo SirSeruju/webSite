@@ -1,0 +1,43 @@
+:root {
+  --header-height: 60px;
+  --footer-height: 100px;
+  --margin: 60px;
+  --border-thick: 2px;
+}
+
+* {
+  background-color: #EEE;
+  padding: 0;
+  margin: 0;
+  font-size: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+#header {
+  height: var(--header-height);
+  border-bottom: var(--border-thick) solid black;
+  margin-left: var(--margin);
+  margin-right: var(--margin);
+  position: fixed;
+  width: calc(100% - 2 * var(--margin));
+  top: 0;
+}
+
+#content {
+  margin-top: calc(var(--header-height) + var(--border-thick));
+  margin-left: var(--margin);
+  margin-right: var(--margin);
+  width: calc(100% - 2 * var(--margin));
+  min-height: calc(100% - var(--header-height) - var(--footer-height) - 2 * var(--border-thick));
+}
+
+#footer {
+  height: var(--footer-height);
+  width: calc(100% - 2 * var(--margin));
+  border-top: var(--border-thick) solid black;
+  margin-left: var(--margin);
+  margin-right: var(--margin);
+}
