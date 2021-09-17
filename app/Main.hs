@@ -8,7 +8,9 @@ import Data.Monoid (mconcat)
 
 main :: IO ()
 
-main = scotty 3000 $ do
+main = scotty 8080 $ do
+  get "/" $ do
+    file $ "web/index.html"
   get (regex "^/(.*)$") $ do
     path <- param "0"
     file $ "web" ++ path
